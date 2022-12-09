@@ -1,0 +1,89 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.parent {
+    background-color: #eee;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(7, auto);
+    gap: 10px 10px;
+}
+.parent div {
+    padding: 20px;
+    border-bottom: 3px solid red;
+    position: relative;
+}
+.parent div::after {
+    content: '"';
+    font-size: 50px;
+    position: absolute;
+    right: 10px;
+    bottom: -20px;
+    opacity: 0.4;
+}
+.parent div h4:first-of-type {
+    margin-top: 0;
+}
+.parent div p:first-of-type {
+    opacity: .3;
+    font-weight: bold;
+}
+.parent div p:last-of-type {
+    opacity: .9;
+}
+.osama {
+    grid-area: 1 / 1 / 3 / 3;
+}
+.ahmed {
+    grid-area: 1 / 3 / 3 / 4;
+}
+.shady {
+    grid-area: 1 / 4 / 7 / 5;
+}
+.ibrahim {
+    grid-area: 3 / 1 / 7 / 2;
+}
+.mohamed {
+    grid-area: 3 / 2 / 5 / 4;
+}
+.eldin {
+    grid-area: 5 / 2 / 7 / 4;
+}
+.sayed {
+    grid-area: 7 / 1 / 8 / 2;
+}
+.ibra {
+    grid-area: 7 / 2 / 8 / 3;
+}
+.gamal {
+    grid-area: 7 / 3 / 8 / 4;
+}
+.eman {
+    grid-area: 7 / 4 / 8 / 5;
+}
+.osama,
+.ahmed,
+.ibrahim,
+.eldin,
+.sayed,
+.gamal,
+.eman {
+    background-color: white;
+}
+.ibra,
+.shady,
+.mohamed {
+    background-color: black;
+    color: white;
+}
